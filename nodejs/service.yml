@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nodejs-service
+  namespace: nodejs
+spec:
+  selector:
+    app: nodejs
+  ports:
+    - protocol: TCP
+      targetPort: 8000
+      port: 8000
+  type: NodePort
+
